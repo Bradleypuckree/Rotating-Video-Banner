@@ -1,0 +1,465 @@
+/* Variables */
+/* General */
+body {
+  background-color: #000;
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  overflow: hidden; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+.site-navigation li {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  padding: 0 15px 0 0;
+  cursor: pointer; }
+
+small {
+  color: #4a4a4a;
+  position: relative;
+  top: -10px;
+  font-size: 12px;
+  padding: 0 0 0 40px; }
+
+/* Header Area*/
+.site-header {
+  padding: 20px 40px 20px 40px; }
+  .site-header::after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/* Header Branding */
+.site-identity {
+  float: left; }
+  .site-identity h1 {
+    font-size: 1.5em;
+    margin: .7em 0 .3em 0;
+    display: inline-block; }
+  .site-identity img {
+    max-width: 40%;
+    float: left;
+    margin: 0 10px 0 0; }
+
+/* Header Navigation */
+.site-navigation {
+  float: right;
+  margin: -10px 0 0 0; }
+  .site-navigation li {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    padding: 0 15px 0 0;
+    cursor: pointer; }
+    .site-navigation li:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: 0;
+      height: 2px;
+      background-color: #fff;
+      transition: width .3s ease-in-out; }
+    .site-navigation li:hover:after {
+      width: 75%; }
+
+/* 2 Column Layout For Contact Page */
+.wrap {
+  display: flex;
+  justify-content: space-between; }
+
+.inner {
+  width: calc(50% - 1.25em);
+  /* First Column */ }
+  .inner img {
+    max-width: 100%; }
+  .inner .contact-image-left {
+    margin: 0 0 0 150px; }
+
+/* Second Column */
+.contact-page-text .main-header {
+  color: #202020;
+  font-size: 14.0625vw;
+  position: relative;
+  left: -90px; }
+.contact-page-text .secondary-text {
+  color: #fff;
+  position: relative;
+  left: 150px;
+  top: -90px;
+  width: 250px;
+  margin-top: 40px; }
+  .contact-page-text .secondary-text .secondary-text-details {
+    color: #fff;
+    position: relative;
+    left: 150px;
+    top: -90px;
+    width: 230px;
+    margin-top: 40px; }
+
+/* Social Media Columns Secondary Text - Column Two */
+.follow-icon {
+  position: relative;
+  top: -10px; }
+
+.follow-icon-quora {
+  position: relative;
+  top: -5px; }
+
+.social-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  top: -55px;
+  left: -25px; }
+  .social-container .title {
+    text-align: center;
+    width: 10%; }
+
+.item {
+  padding: 0;
+  text-align: center;
+  width: 10%;
+  color: #fff; }
+  .item .follow-text {
+    color: #fff;
+    margin: 0 0 0 -40px; }
+    .item .follow-text p {
+      display: block;
+      max-width: 10%;
+      color: #fff; }
+
+/* Home Page Video Slider */
+.wrapper {
+  width: 100%;
+  margin-top: 200px; }
+
+.carousel {
+  width: 100%;
+  cursor: pointer; }
+  .carousel.dragging {
+    cursor: grabbing; }
+  .carousel--wrap {
+    white-space: nowrap; }
+  .carousel--item {
+    display: inline-block;
+    width: 30vw;
+    padding: 0;
+    user-select: none; }
+    .carousel--item figure {
+      position: relative;
+      z-index: 1;
+      display: block;
+      height: 0;
+      padding-bottom: 56.25%;
+      overflow: hidden;
+      margin: 0 0 0 0; }
+      .carousel--item figure img {
+        position: absolute;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        vertical-align: middle;
+        transform-origin: center; }
+    .carousel--item h2 {
+      z-index: 1;
+      bottom: 1.8vw;
+      font-size: 1.5vw;
+      bottom: 1vw;
+      color: #fff;
+      padding: 0 0 0 40px; }
+  .carousel--progress {
+    position: relative;
+    z-index: 2;
+    bottom: 2vw;
+    top: 40px;
+    width: 20vw;
+    height: 2px;
+    background: #4a4a4a;
+    margin-left: 38.07094%;
+    cursor: col-resize; }
+    .carousel--progress-bar {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #a5a7ac;
+      transform: scaleX(0);
+      transform-origin: 0% 0%; }
+
+/*Blur Other Carousel Items - Hover Effect*/
+.carousel--wrap.carousel--item:hover {
+  opacity: .5; }
+
+.carousel--wrap .carousel--item {
+  background-color: black;
+  margin: 2px; }
+
+.carousel--wrap:hover .carousel--item:not(:hover) {
+  opacity: .5; }
+
+/*Animate Text on Contact Page*/
+.SlidingText {
+  position: relative;
+  top: 50%;
+  left: -15%;
+  margin: 0;
+  text-align: center;
+  animation: slidingText 6s ease-out;
+  transition-timing-function: cubic-bezier(0, 1.5, 0.5, 1);
+  font-size: 14.0625vw; }
+
+@keyframes slidingText {
+  0% {
+    transform: translateX(-1000px) skew(0deg, 0deg); }
+  10% {
+    transform: translateX(-100%) skew(0deg, 0deg); }
+  20% {
+    transform: skew(0deg, 0deg); }
+  30% {
+    transform: translateX(7.5px) skew(-35deg, 0deg); }
+  35% {
+    transform: translateX(5px) skew(-25deg, 0deg); }
+  40% {
+    transform: translateX(2.5px) skew(-15deg, 0deg); }
+  45% {
+    transform: translateX(-2.5px) skew(15deg, 0deg); }
+  50% {
+    transform: translateX(-5px) skew(25deg, 0deg); }
+  55% {
+    transform: translateX(-2.5px) skew(15deg, 0deg); }
+  60% {
+    transform: translateX(2.5px) skew(-15deg, 0deg); }
+  65% {
+    transform: translateX(5px) skew(-25deg, 0deg); }
+  70% {
+    transform: translateX(2.5px) skew(-15deg, 0deg); }
+  /*70% { transform: translateX(-1px) skew(7.5deg, 0deg); }  */
+  80% {
+    transform: translateX(1px) skew(-7.5deg, 0deg); }
+  90% {
+    transform: translateX(0px) skew(0deg, 0deg); }
+  100% {
+    transform: translateX(0px); } }
+/*Rotate Social Media Icons*/
+.follow-icon {
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out; }
+
+.follow-icon:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg); }
+
+.follow-icon-quora {
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out; }
+
+.follow-icon-quora:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg); }
+
+/*Responsive - Home Page - Mobile and Tablet*/
+/*Mobile*/
+@media only screen and (max-width: 400px) {
+  body {
+    overflow-x: visible;
+    overflow-y: visible; }
+
+  .wrapper {
+    width: 100%;
+    margin-top: 20px !important; }
+
+  .site-navigation {
+    float: right;
+    margin: -40px 0 0 0; }
+
+  .carousel--item h2 {
+    z-index: 1;
+    bottom: 1.8vw;
+    font-size: 24px;
+    bottom: 1vw;
+    color: #fff;
+    padding: 0 0 0 30px;
+    top: -170px !important;
+    position: relative; }
+
+  small {
+    position: relative !important;
+    top: -190px !important;
+    font-size: 12px; }
+
+  .carousel--wrap {
+    white-space: nowrap;
+    width: 400px !important;
+    margin-top: -30px; }
+
+  .carousel--item {
+    width: 400px !important;
+    height: 360px; }
+
+  .carousel--progress {
+    position: relative;
+    z-index: 2;
+    bottom: 2vw;
+    top: 40px;
+    width: 20vw;
+    height: 2px;
+    background: #4a4a4a;
+    margin-left: 38.07094%;
+    cursor: col-resize;
+    display: none; } }
+/*Tablet*/
+@media only screen and (max-width: 800px) {
+  body {
+    overflow: visible; }
+
+  .wrapper {
+    width: 100%;
+    margin-top: -10px; }
+
+  .carousel--item h2 {
+    z-index: 1;
+    bottom: 1.8vw;
+    font-size: 6.03125vw;
+    bottom: 1vw;
+    color: #fff;
+    padding: 0 0 0 30px;
+    top: -400px;
+    position: relative; }
+
+  small {
+    color: white;
+    position: relative;
+    top: -440px;
+    font-size: 2.38542vw;
+    padding: 0 0 0 30px; }
+
+  .carousel--wrap {
+    white-space: nowrap;
+    width: 800px; }
+
+  .carousel--item {
+    display: block;
+    padding: 0;
+    user-select: none;
+    margin-bottom: -165px !important;
+    width: 800px; }
+
+  .carousel--progress {
+    position: relative;
+    z-index: 2;
+    bottom: 2vw;
+    top: 40px;
+    width: 20vw;
+    height: 2px;
+    background: #4a4a4a;
+    margin-left: 38.07094%;
+    cursor: col-resize;
+    display: none; } }
+/*Responsive - Contact Page - Mobile and Tablet*/
+/*Mobile*/
+@media only screen and (max-width: 400px) {
+  .inner .contact-image-left {
+    margin: 0 0 0 -20px; }
+
+  .SlidingText {
+    position: relative;
+    top: -55px !important;
+    left: -25% !important; }
+
+  .contact-page-text .secondary-text {
+    color: #fff;
+    position: relative;
+    margin: 0;
+    width: 220px;
+    margin-top: 20px;
+    font-size: 13px; }
+
+  .contact-page-text .main-header {
+    color: #202020;
+    font-size: 14.0625vw;
+    position: relative;
+    left: -90px;
+    margin-bottom: 60px; }
+
+  .social-container {
+    top: -95px !important;
+    left: -65px !important; }
+
+  .follow-icon-quora {
+    position: relative;
+    top: -5px;
+    left: 20px; }
+
+  #behance-icon {
+    position: relative;
+    top: -7px;
+    left: 40px; }
+
+  .item .follow-text {
+    color: #fff;
+    margin: 0 0 0 -50px;
+    font-size: 13px; } }
+/*Tablet*/
+@media only screen and (max-width: 800px) {
+  .inner .contact-image-left {
+    margin: 0 0 0 -20px; }
+
+  .SlidingText {
+    position: relative;
+    top: -80px;
+    left: -35%;
+    margin: 0;
+    text-align: center;
+    animation: slidingText 6s ease-out;
+    transition-timing-function: cubic-bezier(0, 1.5, 0.5, 1);
+    font-size: 21.0625vw;
+    color: #202020; }
+
+  .contact-page-text .secondary-text {
+    color: #fff;
+    position: relative;
+    left: -45px;
+    top: -130px;
+    width: 220px;
+    margin-top: 20px;
+    font-size: 13px; }
+
+  .contact-page-text .main-header {
+    color: #202020;
+    font-size: 14.0625vw;
+    position: relative;
+    left: -90px;
+    margin-bottom: 60px; }
+
+  .social-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    top: -100px;
+    left: -135px; }
+
+  .follow-icon-quora {
+    position: relative;
+    top: -5px;
+    left: 20px; }
+
+  #behance-icon {
+    position: relative;
+    top: -7px;
+    left: 40px; }
+
+  .item .follow-text {
+    color: #fff;
+    margin: 0 0 0 -50px;
+    font-size: 13px; } }
+
+/*# sourceMappingURL=style.css.map */
